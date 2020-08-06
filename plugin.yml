@@ -1,0 +1,36 @@
+name: ChatPlus
+main: io.github.blocksnmore.chatplus.Main
+version: 1.0.0
+author: Blocks_n_more 
+commands:
+   chatplus:
+      description: Main ChatPlus command
+      aliases: [chat, cp]
+   clearchat:
+      description: Clear chat
+      aliases: [cc, chatclear]
+   mutechat:
+      description: Mutes global chat
+      aliases: [mc, chatmute]
+      
+permissions:
+  chatplus.reload:
+    description: Reload the config
+    default: op
+    
+  chatplus.mutechat:
+    description: Mute the chat
+    default: op
+  chatplus.mutechat.bypass:
+    description: Bypass the mutechat
+    default: op
+    
+  chatplus.clearchat:
+    description: Clear the chat
+    default: op
+  chatplus.clearchat.bypass:
+    description: Bypass clearchat if enabled in config
+    default: op
+  chatplus.colorchat:
+    description: Allows using color codes if enabled in the config
+    default: op
