@@ -19,7 +19,7 @@ public class Main extends JavaPlugin {
 	
 	
 	String comment =
-	"Hey! If you see this you might be using a decompiler, my code is public on my github! https://github.com/blocksnmore"; // Comment for people decompiling
+	"Hey! If you see this you might be using a decompiler, my code is public on my github! https://github.com/blocksnmore/chatplus"; // Comment for people decompiling
 	String comment2 = 
 	"Feel free to check it out and report some issues you find!"; // Comment for people decompiling x2
 	
