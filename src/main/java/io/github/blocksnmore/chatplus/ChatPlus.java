@@ -22,6 +22,15 @@ public class ChatPlus {
 		case "clearchat": case "chatclear": case "cc":
 			Clearchat.ClearChatCmd(player, args);
 			break;
+		case "rl": case "reload": case "reloadconfig":
+			String message;
+			message = mainclass.getConfig().getString("prefix")+"Reloading config!";
+			
+				player.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
+				mainclass.reloadConfig();
+				message = mainclass.getConfig().getString("prefix")+"Reloaded config!";
+				player.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
+			break;
 		
 		}
 	}
