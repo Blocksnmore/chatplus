@@ -11,7 +11,7 @@ import io.github.blocksnmore.chatplus.*; // File imports
 
 @SuppressWarnings("unused")
 public class ChatListener implements Listener{
-	Main mainclass = new Main();
+	static Main mainclass = Main.plugin;
 	@EventHandler
 	public void onChat(AsyncPlayerChatEvent e) {
 		e.setCancelled(true);

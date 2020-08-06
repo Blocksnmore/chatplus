@@ -6,7 +6,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class Clearchat {
-	static Main mainclass = new Main();
+	static Main mainclass = Main.plugin;
 	public static void ClearChatCmd(CommandSender player, String[] silent) {
 		if(player.hasPermission("chatplus.clearchat")) {
 			if(silent.length == 0) {

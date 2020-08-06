@@ -12,7 +12,7 @@ import io.github.blocksnmore.chatplus.*;
 
 @SuppressWarnings("unused")
 public class Main extends JavaPlugin {
-	
+	public static Main plugin;
 	public FileConfiguration config = getConfig();
 	// WorkAround for getConfig not being avalible in other files
 	public String mutechatcurrentlymuted = config.getString("mutechat-currently-muted");
@@ -49,11 +49,13 @@ public class Main extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new ChatListener() /* Listener */, this/* Main */); // Register Listener
 		this.log("[ChatPlus] Tip: If ChatPlus chat is not working check if you have a diffrent chat plugin that might be taking priority");
 		this.log("[ChatPlus] ChatPlus is now enabled!");
+		plugin = this;
 	}
 	@Override
 	public void onDisable() {
 		this.log("[ChatPlus] Shutting down ChatPlus");
 		this.log("[ChatPlus] Thanks for using ChatPlus!");
+		plugin = null;
 	}
 	
 	private void log(String content) { // Cause i'm too lazy to type out "System.out.println" every console log thing

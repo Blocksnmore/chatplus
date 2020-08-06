@@ -5,7 +5,7 @@ import org.bukkit.command.CommandSender;
 
 public class Mutechat {
 	public static boolean muted;
-	static Main mainclass = new Main();
+	static Main mainclass = Main.plugin;
 	public static void MuteChatCmd(CommandSender player, String silent) {
 		if(player.hasPermission("chatplus.mutechat"))
 		if(silent  != null) {

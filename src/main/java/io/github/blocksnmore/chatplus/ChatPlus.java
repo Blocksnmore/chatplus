@@ -7,7 +7,7 @@ import io.github.blocksnmore.chatplus.*;
 
 @SuppressWarnings("unused")
 public class ChatPlus {
-	static Main mainclass = new Main();
+	static Main mainclass = Main.plugin;
 	public static void ChatPlusCmd(CommandSender player, String[] args) {
 		if(args.length == 0) {
 			String message = "%prefix% &fChat&cPlus&f by &bBlocks_n_more";
