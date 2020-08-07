@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 
 public class Clearchat {
 	static Main mainclass = Main.plugin;
+	@SuppressWarnings("deprecation")
 	public static void ClearChatCmd(CommandSender player, String[] silent) {
 		if(player.hasPermission("chatplus.clearchat")) {
 			if(silent.length == 0) {
@@ -15,7 +16,7 @@ public class Clearchat {
 				if(silent[0].equalsIgnoreCase("-s")) {
 					clearchatallsilent();
 				}else {
-					if(Bukkit.getServer().getPlayer(silent[1]) != null) {
+					if(Bukkit.getPlayer(silent[1]) != null) { 
 						String prefix = mainclass.getConfig().getString("prefix");
 						player.sendMessage(prefix+" Coming soon!");
 					}else {
