@@ -7,24 +7,24 @@
 # Bukkit color codes (&color) are currently the only ones supported!
 
 
-prefix: '&c[&fChat&cPlus&f]&f'
+prefix: "&c[&fChat&cPlus&f]&f"
 
 # Mutechat config:
-mutechat-mute: '%prefix% Chat has been muted by %staff%!'
+mutechat-mute: "%prefix% Chat has been muted by %staff%!"
 
-mutechat-mute-silent: '%prefix% Chat has been muted!'
+mutechat-mute-silent: "%prefix% Chat has been muted!"
 
-mutechat-unmute: '%prefix% Chat has been unmuted by %staff%!'
+mutechat-unmute: "%prefix% Chat has been unmuted by %staff%!"
 
-mutechat-unmute-silent: '%prefix% Chat has been unmuted!'
+mutechat-unmute-silent: "%prefix% Chat has been unmuted!"
 
-mutechat-currently-muted: '%prefix% Chat is currently muted!'
+mutechat-currently-muted: "%prefix% Chat is currently muted!"
 
 # Clearchat config
 
-clearchat-cleared: '%prefix% Chat has been cleared by %staff%!'
+clearchat-cleared: "%prefix% Chat has been cleared by %staff%!"
 
-clearchat-cleared-silent: '%prefix% Chat has been cleared!'
+clearchat-cleared-silent: "%prefix% Chat has been cleared!"
 
 clearchat-enable-bypass: false # If you set this to true players with the clearchat bypass permission will not have their chat cleared
 
@@ -32,13 +32,13 @@ clearchat-enable-bypass: false # If you set this to true players with the clearc
 
 # This does not currently support ranks, if you think i should suggest it on my github page
 
-chat-formatting: '&f%player% &6>&7 %message%'
+chat-formatting: "&f%player% &6>&7 %message%"
 
 chat-enable-colorcodes: true # If set to true players can use color codes (&color) in their message. If false it will show up as &color 
 
 chat-require-perm: false # If set to true players need a permission to use color codes, this will not work if chat-enable-colorcodes is false
 
 # Errors
-no-perms: '%prefix% Missing perms!'
+no-perms: "%prefix% Missing perms!"
 
-wrong-arg: '%prefix% Invalid argument!'
+wrong-arg: "%prefix% Invalid argument!"

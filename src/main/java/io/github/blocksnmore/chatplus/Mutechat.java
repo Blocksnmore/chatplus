@@ -6,10 +6,10 @@ import org.bukkit.configuration.file.FileConfiguration;
 
 public class Mutechat {
 	public static boolean muted;
-	static FileConfiguration mainclass = Main.getPlugin(Main.class).getConfig();
+	static FileConfiguration mainclass = Main.plugin.getConfig();
 	public static void MuteChatCmd(CommandSender player, String silent) {
 		if(player.hasPermission("chatplus.mutechat"))
-		if(silent  != null) {
+		if(silent == "") {
 			if(muted) {
 				muted = false;
 				String message;

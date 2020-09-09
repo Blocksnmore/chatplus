@@ -14,23 +14,19 @@ commands:
       aliases: [mc, chatmute]
       
 permissions:
-  chatplus.reload:
-    description: Reload the config
+  chatplus.*:
+    description: All perms
     default: op
-    
-  chatplus.mutechat:
-    description: Mute the chat
-    default: op
-  chatplus.mutechat.bypass:
-    description: Bypass the mutechat
-    default: op
-    
-  chatplus.clearchat:
-    description: Clear the chat
-    default: op
-  chatplus.clearchat.bypass:
-    description: Bypass clearchat if enabled in config
-    default: op
-  chatplus.colorchat:
-    description: Allows using color codes if enabled in the config
-    default: op
+    children:
+     chatplus.reload:
+       description: Reload the config 
+     chatplus.mutechat:
+       description: Mute the chat
+     chatplus.mutechat.bypass:
+       description: Bypass the mutechat
+     chatplus.clearchat:
+       description: Clear the chat
+     chatplus.clearchat.bypass:
+       description: Bypass clearchat if enabled in config
+     chatplus.colorchat:
+       description: Allows using color codes if enabled in the config

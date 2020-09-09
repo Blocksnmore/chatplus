@@ -8,6 +8,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import io.github.blocksnmore.chatplus.*;
+import io.github.blocksnmore.chatplus.ChatListener;
 
 
 
@@ -15,7 +16,7 @@ import io.github.blocksnmore.chatplus.*;
 public class Main extends JavaPlugin {
 	
 	public static Main plugin;
-	public FileConfiguration config = getConfig();
+	final FileConfiguration config = this.getConfig();
 	// WorkAround for getConfig not being available in other files
 	public String mutechatcurrentlymuted = config.getString("mutechat-currently-muted");
 	
@@ -31,11 +32,16 @@ public class Main extends JavaPlugin {
 			ChatPlus.ChatPlusCmd(sender, args);
 			break;
 		case "mutechat": case "chatmute": case "mc":
+			if(args[0] != null) {
+				Mutechat.MuteChatCmd(sender, "");
+			}else {
 			Mutechat.MuteChatCmd(sender, args[0].toLowerCase());
+			}
 			break;
 		case "clearchat": case "chatclear": case "cc":
 			Clearchat.ClearChatCmd(sender, args);
 			break;
+		
 		
 		}
 		return false;
@@ -48,7 +54,7 @@ public class Main extends JavaPlugin {
 		this.config.options().copyDefaults(true);
 		saveDefaultConfig();
 		this.log("[ChatPlus] Registering Listener for chat");
-		getServer().getPluginManager().registerEvents(new ChatListener() /* Listener */, this/* Main */); // Register Listener
+		getServer().getPluginManager().registerEvents(new ChatListener(this) /* Listener */, this/* Main */); // Register Listener
 		this.log("[ChatPlus] Tip: If ChatPlus chat is not working check if you have a diffrent chat plugin that might be taking priority");
 		this.log("[ChatPlus] ChatPlus is now enabled!");
 	}
