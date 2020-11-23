@@ -1,4 +1,3 @@
 # chatplus
- 
-this is currently in works
-ignore pls
+
+A chat plugin I developed for fun but abandoned because i coded the framework weird
